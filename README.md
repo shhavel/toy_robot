@@ -104,3 +104,10 @@ bundle exec rspec
 - Package the solution as a gem with an executable.
 - Allow extra whitespace in commands to make the format more flexible.
 - Allow the robot to rotate in 45° (π/4 radians) increments and support additional directions: `NORTHEAST`, `NORTHWEST`, `SOUTHEAST`, and `SOUTHWEST`. When facing diagonally, the robot would move along both the X and Y axes in a single move.
+
+### Tests Improvements
+
+- Add tests in `spec/lib/robot_spec.rb` for repeated valid `PLACE` commands updating both coordinates and direction.
+- Add tests confirming that invalid `PLACE` commands preserve the robot's existing position and direction, and that an invalid direction such as `UP` is rejected.
+- Add a sequence test confirming that commands are ignored after an invalid initial `PLACE` and executed after a valid `PLACE`.
+- Add `MOVE` tests for the north (`y = 4`) and east (`x = 4`) table boundaries.
