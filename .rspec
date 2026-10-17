@@ -1,0 +1,6 @@
+--format doc
+--color
+--tty
+-I lib
+--require spec_helper
+--require pry

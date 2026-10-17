@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../lib/robot"
+
+robot = Robot.new
+$stdin.each_line do |command|
+  robot.execute(command.chomp)
+end
