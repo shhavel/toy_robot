@@ -10,10 +10,7 @@ class Robot
   def execute(command)
     if (m = command.match(/\APLACE (?<x>\d+),(?<y>\d+),(?<direction>NORTH|EAST|SOUTH|WEST)\z/))
       place(m[:x].to_i, m[:y].to_i, m[:direction])
-      return
-    end
-
-    if placed?
+    elsif placed?
       case command
       when "MOVE"
         move

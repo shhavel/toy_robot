@@ -104,6 +104,8 @@ bundle exec rspec
 - Package the solution as a gem with an executable.
 - Allow extra whitespace in commands to make the format more flexible.
 - Allow the robot to rotate in 45° (π/4 radians) increments and support additional directions: `NORTHEAST`, `NORTHWEST`, `SOUTHEAST`, and `SOUTHWEST`. When facing diagonally, the robot would move along both the X and Y axes in a single move.
+- Support moving multiple steps in a single command, e.g. `MOVE 3` to move three cells forward.
+- Support multiple 90° turns in a single command, e.g. `RIGHT 2` to turn 180° clockwise.
 
 ### Tests Improvements
 
